@@ -14,8 +14,8 @@ interface PriceBoxProps {
 export default function PriceBox({ coin }: PriceBoxProps) {
     const [amount, setAmount] = useState("")
     return (
-        <div className="container  mx-auto mt-14 mb-14">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="max-w-[450] md:max-w-[1140]  mx-auto md:mt-10 mb-14">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-">
                 <div className="bg-white p-6 rounded-2xl shadow order-2 md:order-1">
                     <h2 className="text-gray-800 font-extrabold text-lg mb-6 text-right">قیمت لحظه ای</h2>
                     <div className="flex items-center justify-between border-b border-gray-200">
@@ -110,13 +110,13 @@ export default function PriceBox({ coin }: PriceBoxProps) {
 
                     </div>
 
-                    <div className="w-full md:w-[540px] h-12 rounded-3xl bg-white border-2 border-sky-700 flex items-center justify-center mx-auto mt-4 cursor-pointer hover:bg-sky-50 transition">
+                    <div className="w-full md:w-[500px] h-12 rounded-3xl bg-white border-2 border-sky-700 flex items-center justify-center mx-auto mt-4 cursor-pointer hover:bg-sky-50 transition">
                         <p className="text-sky-700 text-xl font-bold">ادامه خرید</p>
                     </div>
 
                 </div>
             </div>
-            <h2 className="text-center  md:text-right text-3xl font-bold mt-20 mb-5 md:mb-0">درباره {coin.fa_name} </h2>
+            <h2 className="text-center  md:text-right text-3xl font-bold mt-20  md:mb-6">درباره {coin.fa_name} </h2>
             <div className="flex flex-col md:flex-row items-center justify-between gap-10 md:gap-20  px-1">
                 <p className="text-lg leading-9">{coin.about}</p>
                 <Image className="w-[1300px] md:w-[1900px] md:h-[320px]" src="/Images/Group.png" width={100} height={50} alt="Group"/>

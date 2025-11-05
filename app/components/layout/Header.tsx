@@ -10,7 +10,7 @@ function Header() {
   return (
     <div className='  bg-gray-100  '>
 
-      <div className='container mx-auto flex items-center justify-between py-4   gap-3 '>
+      <div className='max-w-[450] md:max-w-[1140] mx-auto flex items-center justify-between py-4   gap-3 '>
 
         <div className='flex'>
 
@@ -55,7 +55,7 @@ function Header() {
     ></div>
 
     
-    <div className="md:hidden sm:hidden lg:hidden absolute top-18 right-0 bg-gray-100 shadow-lg p-4 flex flex-col gap-4 z-50">
+    <div className="md:hidden sm:hidden lg:hidden max-w-[450] mx-auto absolute top-18 right-0 bg-gray-100 shadow-lg p-4 flex flex-col gap-4 z-50">
       <Link className='text-gray-800 hover:text-sky-600 text-lg' href='#'>صفحه اصلی</Link>
       <Link className='text-gray-800 hover:text-sky-600 text-lg' href='#'>قیمت رمزارزها</Link>
       <Link className='text-gray-800 hover:text-sky-600 text-lg' href='#'>مقالات</Link>

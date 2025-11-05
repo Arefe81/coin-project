@@ -8,7 +8,7 @@ export default function QuestionBox() {
     const [isOpen1 , setIsOpen1] = useState(false)
 
     return (
-        <div className="container mt-20 px-4">
+        <div className="max-w-[450] md:max-w-[1140] mx-auto mt-20 px-4">
             <h2 className="text-4xl font-extrabold text-center md:text-right">
                 سوالات متداول
             </h2>
@@ -103,7 +103,7 @@ export default function QuestionBox() {
             </div>
 
 
-            <div className="bg-gray-100 mt-10 mb-12 rounded-2xl">
+            <div className="bg-gray-100  mt-10 mb-12 rounded-2xl">
                 <div className="flex flex-col md:flex-row items-center md:items-center gap-6 text-center p-6">
                     <div className="w-full md:w-1/3 flex justify-center">
                         <Image

@@ -13,7 +13,7 @@ export default function Footer() {
     <footer dir="rtl" className="bg-[#0F2440] text-white mt-1 w-full">
       
     
-      <div className="container mx-auto  py-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-20 text-right">
+      <div className="max-w-[450] md:max-w-[1140] mx-auto  py-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-20 text-right">
         
       
         <div className="flex flex-col mx-1">

@@ -34,7 +34,7 @@ export default function FetchCoinPage() {
     return <p>خطایی رخ داده است یا داده‌ای یافت نشد</p>;
 
   return (
-    <div className="container mx-auto px-4 py-6">
+    <div className="max-w-[1140] mx-auto px-4 py-6">
       
       <PriceBox coin={data} />
 

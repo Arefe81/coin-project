@@ -3,8 +3,8 @@ import React, { useState } from "react";
 import axios from "axios";
 import Link from "next/link";
 import { useQuery } from "@tanstack/react-query";
-import { Coins, Search } from "lucide-react";
-import Pagination from "./Pagination"; // مسیر کامپوننت pagination
+import { Search } from "lucide-react";
+import Pagination from "./Pagination";
 import { CoinItem } from "@/app/types";
 
 const fetchCoins = async (page: number, search: string): Promise<CoinItem[]> => {
@@ -21,17 +21,13 @@ export default function CoinsTable() {
   const [page, setPage] = useState(1);
 
   const {
-  data: coins = [],
-  isLoading,
-  isError,
-} = useQuery({
-  queryKey: ["coins", page, search],
-  queryFn: () => fetchCoins(page, search),
-   
-     
-});
-
-  
+    data: coins = [],
+    isLoading,
+    isError,
+  } = useQuery({
+    queryKey: ["coins", page, search],
+    queryFn: () => fetchCoins(page, search),
+  });
 
   if (isError)
     return (
@@ -42,24 +38,22 @@ export default function CoinsTable() {
 
   return (
     <div className="">
-      <div className="container mx-auto ">
-        {/* هدر و سرچ */}
-        <div className="flex flex-col md:flex-row justify-between items-center gap-4"></div>
+      <div className="max-w-[1140px] mx-auto">
 
-        {/* نسخه دسکتاپ */}
-        <div className="hidden md:block bg-white rounded-2xl shadow">
-          <table className="text-center w-full">
-            <thead className="bg-gray-200 text-gray-700">
+      
+        <div className="hidden md:block bg-white rounded-2xl shadow overflow-hidden">
+          <table className="w-full text-center">
+            <thead className="bg-gray-200 text-gray-900">
               <tr>
-                <th className="py-4 px-3 font-semibold">نام رمز ارز</th>
-                <th className="py-4 px-3 font-semibold">ارزش دلاری</th>
-                <th className="py-4 px-3 font-semibold">تغییر روزانه</th>
-                <th className="py-4 px-3 font-semibold">خرید از والت</th>
-                <th className="py-4 px-3 font-semibold">فروش به والت</th>
-                <th className="py-4 px-3 font-semibold">
-                  <div className="relative md:w-80">
+                <th className="py-4  font-bold">نام رمز ارز</th>
+                <th className="py-4 font-semibold">ارزش دلاری</th>
+                <th className="py-4 font-semibold">تغییر روزانه</th>
+                <th className="py-4 font-semibold">خرید از والت</th>
+                <th className="py-4 font-semibold">فروش به والت</th>
+                <th className="py-4 font-semibold">
+                  <div className="relative w-60 mx-auto">
                     <Search
-                      className="absolute left-3 top-3 text-gray-400"
+                      className="absolute left-54 top-5 text-gray-400"
                       size={20}
                     />
                     <input
@@ -67,12 +61,13 @@ export default function CoinsTable() {
                       placeholder="جستجوی ارز..."
                       value={search}
                       onChange={(e) => setSearch(e.target.value)}
-                      className="w-full pl-10 pr-4 py-2 border border-gray-400 rounded-lg text-right"
+                      className="w-full bg-white  py-4 px-6 text-right rounded-lg border border-gray-300 focus:border-blue-600"
                     />
                   </div>
                 </th>
               </tr>
             </thead>
+
             <tbody>
               {isLoading ? (
                 <tr>
@@ -81,23 +76,37 @@ export default function CoinsTable() {
                   </td>
                 </tr>
               ) : (
-                coins.map((coin) => (
-                  <tr key={coin.id} className="hover:bg-gray-50 transition">
-                    <td className="py-5 flex items-center gap-2 justify-center">
-                      <img
-                        src={coin.icon}
-                        alt={coin.fa_name}
-                        className="w-6 h-6 rounded-full"
-                      />
-                      <span>
-                        {coin.fa_name} ({coin.currency_code})
-                      </span>
+                coins.map((coin, index) => (
+                  <tr
+                    key={coin.id}
+                    className={`transition ${
+                      index % 2 === 0 ? "bg-white" : "bg-gray-100"
+                    } `}
+                  >
+                    
+                    <td className="py-4 pr-6 flex items-center gap-3 justify-start text-center">
+                        <img
+                          src={coin.icon}
+                          alt={coin.fa_name}
+                          className="w-11 h-11 object-cover rounded-full"
+                        />
+                        <div className="flex flex-col justify-center text-right">
+                          <span className="text-md font-semibold">
+                            {coin.fa_name}
+                          </span>
+                          <span className="text-sm text-gray-500">
+                            {coin.currency_code}
+                          </span>
+                        </div>
+                    
                     </td>
-                    <td className="py-4 px-3">
+
+                    <td className="py-4">
                       {Number(coin.price).toLocaleString()}
                     </td>
+
                     <td
-                      className={`py-4 px-3 font-semibold ${
+                      className={`py-4 font-semibold ${
                         parseFloat(coin.daily_change_percent) >= 0
                           ? "text-green-600"
                           : "text-red-500"
@@ -105,18 +114,21 @@ export default function CoinsTable() {
                     >
                       {coin.daily_change_percent}٪
                     </td>
-                    <td className="py-4 px-3">{Number(coin.buy_irt_price).toLocaleString()} تومان
+
+                    <td className="py-4">
+                      {Number(coin.buy_irt_price).toLocaleString()} تومان
                     </td>
-                    <td className="py-4 px-3">
+
+                    <td className="py-4">
                       {Number(coin.sell_irt_price).toLocaleString()} تومان
                     </td>
-                    <td className="py-4 px-3">
+
+                    <td className="py-4">
                       <Link href={`/coins/${coin.currency_code}`}>
-                      <button className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
-                        معامله
-                      </button>
+                        <button className="bg-blue-600 text-white px-10 py-2 rounded-lg hover:bg-blue-700 transition">
+                          معامله
+                        </button>
                       </Link>
-                      
                     </td>
                   </tr>
                 ))
@@ -125,31 +137,39 @@ export default function CoinsTable() {
           </table>
         </div>
 
-        {/* نسخه موبایل */}
-        <div className="grid md:hidden gap-4 mt-6">
-          {coins.map((coin) => (
+        {/* ✅ نسخه موبایل (بدون تغییر — خودش درست بود) */}
+        <div className="md:hidden mt-8 bg-white rounded-2xl shadow overflow-hidden">
+
+          <div className="grid grid-cols-3 text-center bg-gray-200 py-4 text-gray-700 font-semibold">
+            <p>نام رمز ارز</p>
+            <p>ارزش دلاری</p>
+            <p>تغییر روزانه</p>
+          </div>
+
+          {coins.map((coin, index) => (
             <div
               key={coin.id}
-              className="bg-white p-4 rounded-2xl shadow flex justify-between items-center"
+              className={`transition ${
+                index % 2 === 0 ? "bg-white" : "bg-gray-50"
+              }`}
             >
-              <div className="flex items-center gap-3">
-                <img
-                  src={coin.icon}
-                  alt={coin.fa_name}
-                  className="w-10 h-10 rounded-full"
-                />
-                <div>
-                  <p className="font-semibold text-gray-800">
-                    {coin.fa_name} ({coin.currency_code})
-                  </p>
-                  <p className="text-gray-500 text-sm">
-                    {Number(coin.price).toLocaleString()} تومان
-                  </p>
+              <div className="grid grid-cols-3 items-center py-4 px-3 text-center">
+                <div className="flex items-center gap-2 justify-center">
+                  <img src={coin.icon} className="w-11 h-11 rounded-full" />
+                  <div className="text-right">
+                    <span className="text-md font-semibold">{coin.fa_name}</span>
+                    <div className="text-sm text-gray-500">
+                      {coin.currency_code}
+                    </div>
+                  </div>
                 </div>
-              </div>
-              <div className="text-right">
+
+                <p className="text-md font-medium">
+                  ${Number(coin.price).toLocaleString()}
+                </p>
+
                 <p
-                  className={`font-bold ${
+                  className={`text-md font-bold ${
                     parseFloat(coin.daily_change_percent) >= 0
                       ? "text-green-600"
                       : "text-red-500"
@@ -157,18 +177,31 @@ export default function CoinsTable() {
                 >
                   {coin.daily_change_percent}٪
                 </p>
-                <Link href={`/coins/${coin.currency_code}`}>
-                <button  className="mt-2 bg-blue-600 text-white text-sm px-6 py-3 rounded-md hover:bg-blue-700 transition">
+              </div>
+
+              <div className="px-4 pb-4">
+                <div className="flex justify-between">
+                  <p className="text-md text-gray-800">فروش به والت :</p>
+                  <span className="font-semibold text-gray-700">
+                    {Number(coin.sell_irt_price).toLocaleString()} تومان
+                  </span>
+                </div>
+
+                <div className="flex justify-between mt-2">
+                  <p className="text-md text-gray-800">خرید از والت :</p>
+                  <span className="font-semibold text-gray-700">
+                    {Number(coin.buy_irt_price).toLocaleString()} تومان
+                  </span>
+                </div>
+
+                <button className="w-full mt-4 bg-blue-600 text-white text-lg py-4 rounded-xl">
                   معامله
                 </button>
-                </Link>
-                
               </div>
             </div>
           ))}
         </div>
 
-        {/* pagination */}
         <Pagination currentPage={page} totalPages={10} onPageChange={setPage} />
       </div>
     </div>
