@@ -116,7 +116,7 @@ export default function PriceBox({ coin }: PriceBoxProps) {
 
                 </div>
             </div>
-            <h2 className="text-center  md:text-right text-3xl font-bold mt-20  md:mb-6">درباره {coin.fa_name} </h2>
+            <h2 className="text-center  md:text-right text-3xl font-bold mt-20 mb-5 md:mb-6">درباره {coin.fa_name} </h2>
             <div className="flex flex-col md:flex-row items-center justify-between gap-10 md:gap-20  px-1">
                 <p className="text-lg leading-9">{coin.about}</p>
                 <Image className="w-[1300px] md:w-[1900px] md:h-[320px]" src="/Images/Group.png" width={100} height={50} alt="Group"/>

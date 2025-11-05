@@ -35,7 +35,7 @@ export default function CoinsTable() {
   return (
     <div className="max-w-[1140px] mx-auto">
 
-      {/* ✅ Desktop Table */}
+      
       <div className="hidden md:block bg-white rounded-2xl shadow overflow-hidden">
         <table className="w-full text-center table-fixed">
           <thead className="bg-gray-200 text-gray-900">
@@ -46,14 +46,14 @@ export default function CoinsTable() {
               <th className="py-4 w-1/6 font-semibold">خرید از والت</th>
               <th className="py-4 w-1/6 font-semibold">فروش به والت</th>
               <th className="py-4 w-1/6 font-semibold">
-                <div className="relative w-60 mx-auto">
-                  <Search className="absolute left-4 top-3 text-gray-400" size={20} />
+                <div className="relative w-44 mx-auto">
+                  <Search className="absolute left-39 top-4.5 text-gray-400" size={20} />
                   <input
                     type="text"
                     placeholder="جستجوی ارز..."
                     value={search}
                     onChange={(e) => setSearch(e.target.value)}
-                    className="w-full bg-white py-3 px-10 text-right rounded-lg border border-gray-300 focus:border-blue-600"
+                    className="w-full bg-white py-4 px-6 text-right rounded-lg  "
                   />
                 </div>
               </th>
@@ -73,11 +73,11 @@ export default function CoinsTable() {
                   key={coin.id}
                   className={`${index % 2 === 0 ? "bg-white" : "bg-gray-100"}`}
                 >
-                  <td className="py-4 flex items-center gap-3 justify-center">
+                  <td className="py-4 flex items-center gap-1 justify-start px-3">
                     <img src={coin.icon} alt={coin.fa_name} className="w-11 h-11 rounded-full" />
                     <div>
                       <p className="font-semibold text-center">{coin.fa_name}</p>
-                      <p className="text-sm text-gray-500 text-center">{coin.currency_code}</p>
+                      <p className="text-sm text-gray-500 text-right">{coin.currency_code}</p>
                     </div>
                   </td>
 

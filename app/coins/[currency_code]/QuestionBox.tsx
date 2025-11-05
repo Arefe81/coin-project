@@ -30,7 +30,7 @@ export default function QuestionBox() {
 
 
                 <div
-                    className={`transition-all duration-300 overflow-hidden px-4 ${isOpen ? "max-h-77 py-4" : "max-h-0"
+                    className={`transition-all duration-300 overflow-hidden px-4 ${isOpen ? "max-h-81 py-4" : "max-h-0"
                         }`}
                 >
                     <p className="text-lg leading-9">
@@ -60,7 +60,7 @@ export default function QuestionBox() {
 
 
                 <div
-                    className={`transition-all duration-300 overflow-hidden px-4 ${isBaz ? "max-h-77 py-4" : "max-h-0"
+                    className={`transition-all duration-300 overflow-hidden px-4 ${isBaz ? "max-h-81 py-4" : "max-h-0"
                         }`}
                 >
                     <p className="text-lg leading-9">
@@ -89,7 +89,7 @@ export default function QuestionBox() {
 
 
                 <div
-                    className={`transition-all duration-300 overflow-hidden px-4 ${isOpen1 ? "max-h-77 py-4" : "max-h-0"
+                    className={`transition-all duration-300 overflow-hidden px-4 ${isOpen1 ? "max-h-81 py-4" : "max-h-0"
                         }`}
                 >
                     <p className="text-lg leading-9">

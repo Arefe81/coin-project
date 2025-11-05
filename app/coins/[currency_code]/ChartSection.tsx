@@ -52,7 +52,7 @@ export default function ChartSection({ currency_code }: ChartSectionProps) {
   if (isError || !data) return <p>خطا در دریافت اطلاعات چارت</p>;
 
   return (
-    <div className="max-w-[450] bg-white rounded-2xl shadow order-2 md:order-1 py-3 md:max-w-[1140] mx-auto mt-20">
+    <div className=" bg-white rounded-2xl shadow order-2 md:order-1 py-3 md:max-w-[1140] mx-auto mt-20">
       <ul className="flex gap-8 pb-4 text-sm">
         {[
           { label: "24 ساعته", val: "24h" },
@@ -73,7 +73,7 @@ export default function ChartSection({ currency_code }: ChartSectionProps) {
       </ul>
 
     
-      <div className="w-full h-[430px] my-6 boxshadwo bg-white p-6 rounded-lg">
+      <div className="w-full h-[400px] my-6 boxshadwo bg-white p-6 rounded-lg">
         <ResponsiveContainer>
           <ComposedChart data={data}>
             <CartesianGrid strokeDasharray="3 3" vertical={false} />
