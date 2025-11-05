@@ -138,7 +138,7 @@ export default function CoinsTable() {
         </div>
 
         {/* ✅ نسخه موبایل (بدون تغییر — خودش درست بود) */}
-        <div className="md:hidden mt-8 bg-white rounded-2xl shadow overflow-hidden">
+        <div className="md:hidden  bg-white rounded-2xl shadow overflow-hidden">
 
           <div className="grid grid-cols-3 text-center bg-gray-200 py-4 text-gray-700 font-semibold">
             <p>نام رمز ارز</p>
@@ -194,7 +194,7 @@ export default function CoinsTable() {
                   </span>
                 </div>
 
-                <button className="w-full mt-4 bg-blue-600 text-white text-lg py-4 rounded-xl">
+                <button className="w-full mt-4 bg-blue-600 text-white text-lg py-3 rounded-xl">
                   معامله
                 </button>
               </div>
