@@ -125,10 +125,10 @@ export default function CoinsTable() {
       key={coin.id}
       className={`${index % 2 === 0 ? "bg-white" : "bg-gray-50"}`}
     >
-      <div className="grid grid-cols-3 items-center py-4 text-center">
+      <div className="grid grid-cols-3 items-center py-4 px-2 text-center">
 
-        {/* ✅ دقیقاً همان ساختار دسکتاپ */}
-        <div className="flex items-center justify-start gap-3 pl-3">
+        
+        <div className="flex items-center justify-start gap-1 ">
           <img
             src={coin.icon}
             alt={coin.fa_name}
@@ -140,12 +140,12 @@ export default function CoinsTable() {
           </div>
         </div>
 
-        {/* ✅ ستون قیمت — وسط و بدون جابجایی */}
+        
         <p className="font-medium">
           ${Number(coin.price).toLocaleString()}
         </p>
 
-        {/* ✅ ستون تغییرات — وسط و با ثابت‌سازی اندازه متن */}
+        
         <p
           className={`font-bold whitespace-nowrap ${
             parseFloat(coin.daily_change_percent) >= 0
@@ -157,7 +157,6 @@ export default function CoinsTable() {
         </p>
       </div>
 
-      {/* ✅ بخش پایینی بدون تغییر — فقط تراز بهتر */}
       <div className="px-4 pb-4">
         <div className="flex justify-between text-sm">
           <p className="text-gray-800">فروش به والت:</p>
