@@ -132,10 +132,10 @@ export default function CoinsTable() {
           <img
             src={coin.icon}
             alt={coin.fa_name}
-            className="w-11 h-11 rounded-full object-cover"
+            className="w-10 h-10 rounded-full object-cover"
           />
           <div className="text-right leading-tight">
-            <p className="font-semibold text-sm">{coin.fa_name}</p>
+            <p className=" text-md pb-1">{coin.fa_name}</p>
             <p className="text-xs text-gray-500">{coin.currency_code}</p>
           </div>
         </div>

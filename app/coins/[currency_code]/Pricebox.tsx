@@ -22,13 +22,13 @@ export default function PriceBox({ coin }: PriceBoxProps) {
                         <div className="flex items-center gap-3">
                             <img className="mb-6 md:w-[75] md:h-[75] w-15 h-15" src={coin.icon} alt={coin.fa_name} width={75} height={75} />
                             <div className="flex flex-col gap-2 mb-6">
-                                <p className="text-xl ">{coin.fa_name}</p>
+                                <p className="md:text-xl text-md ">{coin.fa_name}</p>
                                 <p>{coin.currency_code}</p>
                             </div>
                         </div>
                         <div className=" flex flex-col gap-2 mb-6  ">
-                            <p className="font-bold">{Number(coin.buy_irt_price).toLocaleString()} تومان</p>
-                            <p className="font-bold text-left">{Number(coin.price).toLocaleString()} $</p>
+                            <p className="">{Number(coin.buy_irt_price).toLocaleString()} تومان</p>
+                            <p className=" text-left">{Number(coin.price).toLocaleString()} $</p>
                         </div>
                     </div>
                     <div className="flex flex-col pt-7 gap-8 ">
