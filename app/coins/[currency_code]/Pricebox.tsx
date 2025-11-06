@@ -48,11 +48,11 @@ export default function PriceBox({ coin }: PriceBoxProps) {
                         </div>
                         <div className="flex items-center justify-between">
                             <p className="md:text-xl text-md">بالاترین قیمت 24 ساعته :</p>
-                            <p className="text-green-600 md:text-lg text-md">1.000.000.000 <span className="text-gray-900  ">تومان</span></p>
+                            <p className="text-green-600 md:text-lg text-md">1.000.000 <span className="text-gray-900  ">تومان</span></p>
                         </div>
                         <div className="flex items-center justify-between">
                             <p className="md:text-xl text-md">پایین ترین قیمت 24 ساعته :</p>
-                            <p className="text-red-500 md:text-lg text-md">1.000.000.000 <span className="text-gray-900  ">تومان</span></p>
+                            <p className="text-red-500 md:text-lg text-md">1.000.000 <span className="text-gray-900  ">تومان</span></p>
                         </div>
                     </div>
                 </div>
