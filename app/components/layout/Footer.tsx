@@ -34,18 +34,18 @@ export default function Footer() {
 
           
           <div className="md:px-13 px-1">
-            <h3 className="text-xl font-bold mb-4 border-b border-gray-600 pb-2  inline-block">
+            <h3 className="md:text-xl md:font-bold mb-4 border-b border-gray-600 pb-2  inline-block">
               لینک‌های مرتبط
             </h3>
-            <div className="flex flex-row gap-4 md:gap-8">
-              <ul className="space-y-3 text-md text-gray-300">
-                <li><a href="#">صفحه اصلی</a></li>
+            <div className="flex flex-row gap-2 md:gap-8">
+              <ul className="space-y-3    text-gray-300">
+                <li className=" md:text-md"><a href="#">صفحه اصلی</a></li>
                 <li><a href="#">قیمت رمز ارزها</a></li>
                 <li><a href="#">مقالات و وبلاگ</a></li>
                 <li><a href="#">درباره ما</a></li>
               </ul>
 
-              <ul className="space-y-3 text-md text-gray-300">
+              <ul className="space-y-3   text-gray-300">
                 <li><a href="#">سوالات متداول</a></li>
                 <li><a href="#">شرایط و قوانین</a></li>
                 <li><a href="#">فرصت‌های شغلی</a></li>
@@ -55,12 +55,12 @@ export default function Footer() {
           </div>
 
           
-          <div className="md:px-13 px-10">
-            <h3 className="text-xl font-bold mb-4 border-b border-gray-600 pb-2 inline-block">
+          <div className="md:px-14 px-10">
+            <h3 className="text-md md:text-xl  md:font-bold mb-4 border-b border-gray-600 pb-2 inline-block">
               تبادل ارز
             </h3>
-            <div className="flex flex-row md:gap-5">
-            <ul className="space-y-3 text-md text-gray-300">
+            <div className="flex flex-row md:gap-4">
+            <ul className=" text-md  space-y-3   text-gray-300">
               <li><a href="#">خرید بیت‌کوین</a></li>
               <li><a href="#">خرید اتریوم</a></li>
               <li><a href="#">خرید ریپل</a></li>
