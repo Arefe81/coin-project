@@ -20,7 +20,7 @@ export default function PriceBox({ coin }: PriceBoxProps) {
                     <h2 className="text-gray-800 font-extrabold text-lg mb-6 text-right">قیمت لحظه ای</h2>
                     <div className="flex items-center justify-between border-b border-gray-200">
                         <div className="flex items-center gap-3">
-                            <img className="mb-6" src={coin.icon} alt={coin.fa_name} width={75} height={75} />
+                            <img className="mb-6 md:w-[75] md:h-[75] w-15 h-15" src={coin.icon} alt={coin.fa_name} width={75} height={75} />
                             <div className="flex flex-col gap-2 mb-6">
                                 <p className="text-xl ">{coin.fa_name}</p>
                                 <p>{coin.currency_code}</p>
@@ -33,26 +33,26 @@ export default function PriceBox({ coin }: PriceBoxProps) {
                     </div>
                     <div className="flex flex-col pt-7 gap-8 ">
                         <div className="flex items-center justify-between">
-                            <p className="text-xl">تغییر قیمت امروز:</p>
-                            <p className={`font-extrabold ${parseFloat(coin.daily_change_percent) >= 0 ? "text-green-600" : "text-red-500"}`} dir="ltr">
+                            <p className="md:text-xl text-md">تغییر قیمت امروز:</p>
+                            <p className={`md:font-extrabold font-bold ${parseFloat(coin.daily_change_percent) >= 0 ? "text-green-600" : "text-red-500"}`} dir="ltr">
                                 {coin.daily_change_percent}%
                             </p>
                         </div>
                         <div className="flex items-center justify-between">
-                            <p className="text-xl">خرید {coin.fa_name} :</p>
-                            <p className=" text-lg text-green-600">{Number(coin.buy_irt_price).toLocaleString()} تومان</p>
+                            <p className="md:text-xl text-md">خرید {coin.fa_name} :</p>
+                            <p className=" md:text-lg text-md  text-green-600">{Number(coin.buy_irt_price).toLocaleString()} <span className="text-gray-900 ">تومان</span></p>
                         </div>
                         <div className="flex items-center justify-between">
-                            <p className="text-xl">فروش {coin.fa_name} :</p>
-                            <p className=" text-lg text-red-500">{Number(coin.sell_irt_price).toLocaleString()} تومان</p>
+                            <p className="md:text-xl text-md">فروش {coin.fa_name} :</p>
+                            <p className=" md:text-lg text-md text-red-500">{Number(coin.sell_irt_price).toLocaleString()} <span className="text-gray-900 ">تومان</span></p>
                         </div>
                         <div className="flex items-center justify-between">
-                            <p className="text-xl">بالاترین قیمت 24 ساعته :</p>
-                            <p className="text-green-600 text-lg">1.000.000.000</p>
+                            <p className="md:text-xl text-md">بالاترین قیمت 24 ساعته :</p>
+                            <p className="text-green-600 md:text-lg text-md">1.000.000.000 <span className="text-gray-900  ">تومان</span></p>
                         </div>
                         <div className="flex items-center justify-between">
-                            <p className="text-xl">پایین ترین قیمت 24 ساعته :</p>
-                            <p className="text-red-500 text-lg">1.000.000.000</p>
+                            <p className="md:text-xl text-md">پایین ترین قیمت 24 ساعته :</p>
+                            <p className="text-red-500 md:text-lg text-md">1.000.000.000 <span className="text-gray-900  ">تومان</span></p>
                         </div>
                     </div>
                 </div>
@@ -60,12 +60,12 @@ export default function PriceBox({ coin }: PriceBoxProps) {
                     <h2 className="text-gray-800 font-extrabold text-lg mb-4 text-right">ارسال می‌کنید</h2>
                     <div className="flex items-center justify-center">
                         <div className="bg-gray-100 w-145 h-14 rounded-3xl flex flex-row items-center justify-between">
-                            <h2 className="text-gray-500 px-4">مقدار را وارد کنید</h2>
+                            <h2 className="text-gray-500 px-5">مقدار را وارد کنید</h2>
                             <div className="flex flex-row items-center justify-center gap-1 ">
                                 <Image className="border-gray-400 border-r-1 px-1" src="/Images/Iran.png" width={35} height={35} alt="iran" />
                                 <p className="text-gray-500">تومان</p>
                             </div>
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg className="mx-5" width="35" height="35" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M16 10L12 14L8 10" stroke="black" stroke-opacity="0.95" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
                         </div>
@@ -88,24 +88,24 @@ export default function PriceBox({ coin }: PriceBoxProps) {
                     <h2 className="text-gray-800 font-extrabold text-lg mb-4 text-right mt-5"> دریافت میکنید </h2>
                     <div className="flex items-center justify-center">
                         <div className="bg-gray-100 w-145 h-14 rounded-3xl flex flex-row items-center justify-between">
-                            <h2 className="text-gray-500 px-4">مقدار نهایی</h2>
+                            <h2 className="text-gray-500 px-5">مقدار نهایی</h2>
                             <div className="flex flex-row items-center justify-center gap-1 ">
                                 <img className="border-gray-400 border-r-1 px-1" src={coin.icon} width={35} height={35} alt="iran" />
                                 <p className="text-gray-500">{coin.fa_name}</p>
                             </div>
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg className="mx-5" width="35" height="35" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M16 10L12 14L8 10" stroke="black" stroke-opacity="0.95" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
                         </div>
                     </div>
                     <div className="flex flex-col">
                         <div className="flex flex-row justify-between">
-                            <h2 className="text-gray-800 font-extrabold text-lg mb-4 text-right mt-5">  نرخ ارز یک </h2>
-                            <p className="text-gray-800 font-bold text-lg mb-4 text-right mt-5 mx-5">5.600 دلار</p>
+                            <h2 className="text-gray-800 font-extrabold md:text-lg text-md mb-4 text-right mt-5">  نرخ ارز یک </h2>
+                            <p className="text-gray-800 font-bold md:text-lg text-md mb-4 text-right mt-5 mx-5">5.600 دلار</p>
                         </div>
                         <div className="flex flex-row justify-between">
-                            <h2 className="text-gray-800 font-extrabold text-lg mb-4 text-right mt-1">  نرخ ارز دو </h2>
-                            <p className="text-gray-800 font-bold text-lg mb-4 text-right mt-1 mx-5"> 49.750 تومان</p>
+                            <h2 className="text-gray-800 font-extrabold md:text-lg text-md mb-4 text-right mt-1">  نرخ ارز دو </h2>
+                            <p className="text-gray-800 font-bold md:text-lg text-md mb-4 text-right mt-1 mx-5"> 49.750 تومان</p>
                         </div>
 
                     </div>
@@ -121,7 +121,7 @@ export default function PriceBox({ coin }: PriceBoxProps) {
                 <p className="text-lg leading-9">{coin.about}</p>
                 <Image className="w-[1300px] md:w-[1900px] md:h-[320px]" src="/Images/Group.png" width={100} height={50} alt="Group"/>
             </div>
-            <h2 className="text-center text-3xl mt-25 font-extrabold md:text-right">نمودار قیمت {coin.fa_name} و نرخ برابری تومان</h2>
+            <h2 className="text-center md:text-3xl text-2xl mt-25 font-extrabold md:text-right">نمودار قیمت {coin.fa_name} و نرخ برابری تومان</h2>
         </div>
     )
 }

@@ -9,7 +9,7 @@ export default function QuestionBox() {
 
     return (
         <div className="max-w-[450] md:max-w-[1140] mx-auto mt-20 px-4">
-            <h2 className="text-4xl font-extrabold text-center md:text-right">
+            <h2 className="md:text-3xl text-2xl  font-extrabold text-center md:text-right">
                 سوالات متداول
             </h2>
 
@@ -30,7 +30,7 @@ export default function QuestionBox() {
 
 
                 <div
-                    className={`transition-all duration-300 overflow-hidden px-4 ${isOpen ? "max-h-81 py-4" : "max-h-0"
+                    className={`transition-all duration-300 overflow-hidden px-4 ${isOpen ? "max-h-84 py-4" : "max-h-0"
                         }`}
                 >
                     <p className="text-lg leading-9">
@@ -60,7 +60,7 @@ export default function QuestionBox() {
 
 
                 <div
-                    className={`transition-all duration-300 overflow-hidden px-4 ${isBaz ? "max-h-81 py-4" : "max-h-0"
+                    className={`transition-all duration-300 overflow-hidden px-4 ${isBaz ? "max-h-84 py-4" : "max-h-0"
                         }`}
                 >
                     <p className="text-lg leading-9">
@@ -89,7 +89,7 @@ export default function QuestionBox() {
 
 
                 <div
-                    className={`transition-all duration-300 overflow-hidden px-4 ${isOpen1 ? "max-h-81 py-4" : "max-h-0"
+                    className={`transition-all duration-300 overflow-hidden px-4 ${isOpen1 ? "max-h-84 py-4" : "max-h-0"
                         }`}
                 >
                     <p className="text-lg leading-9">
