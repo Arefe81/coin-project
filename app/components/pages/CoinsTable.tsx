@@ -128,7 +128,7 @@ export default function CoinsTable() {
       <div className="grid grid-cols-3 items-center py-4 px-2 text-center">
 
         
-        <div className="flex items-center justify-start gap-1 ">
+        <div className="flex items-center text-sm justify-start gap-1 ">
           <img
             src={coin.icon}
             alt={coin.fa_name}

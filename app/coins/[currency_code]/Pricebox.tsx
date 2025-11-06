@@ -19,7 +19,7 @@ export default function PriceBox({ coin }: PriceBoxProps) {
                 <div className="bg-white p-6 rounded-2xl shadow order-2 md:order-1">
                     <h2 className="text-gray-800 font-extrabold text-lg mb-6 text-right">قیمت لحظه ای</h2>
                     <div className="flex items-center justify-between border-b border-gray-200">
-                        <div className="flex items-center gap-3">
+                        <div className="flex items-center gap-1.5">
                             <img className="mb-6 md:w-[75] md:h-[75] w-15 h-15" src={coin.icon} alt={coin.fa_name} width={75} height={75} />
                             <div className="flex flex-col gap-2 mb-6">
                                 <p className="md:text-xl text-md ">{coin.fa_name}</p>
@@ -60,12 +60,12 @@ export default function PriceBox({ coin }: PriceBoxProps) {
                     <h2 className="text-gray-800 font-extrabold text-lg mb-4 text-right">ارسال می‌کنید</h2>
                     <div className="flex items-center justify-center">
                         <div className="bg-gray-100 w-145 h-14 rounded-3xl flex flex-row items-center justify-between">
-                            <h2 className="text-gray-500 px-5">مقدار را وارد کنید</h2>
+                            <h2 className="text-gray-500 px-3 md:text-md text-sm">مقدار را وارد کنید</h2>
                             <div className="flex flex-row items-center justify-center gap-1 ">
                                 <Image className="border-gray-400 border-r-1 px-1" src="/Images/Iran.png" width={35} height={35} alt="iran" />
-                                <p className="text-gray-500">تومان</p>
+                                <p className="text-gray-500 md:text-md text-sm">تومان</p>
                             </div>
-                            <svg className="mx-5" width="35" height="35" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg className="mx-3" width="35" height="35" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M16 10L12 14L8 10" stroke="black" stroke-opacity="0.95" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
                         </div>
@@ -85,15 +85,15 @@ export default function PriceBox({ coin }: PriceBoxProps) {
                     </div>
                     </div>
 
-                    <h2 className="text-gray-800 font-extrabold text-lg mb-4 text-right mt-5"> دریافت میکنید </h2>
+                    <h2 className="text-gray-800 font-extrabold text-lg mb-4 text-right mt-4"> دریافت میکنید </h2>
                     <div className="flex items-center justify-center">
                         <div className="bg-gray-100 w-145 h-14 rounded-3xl flex flex-row items-center justify-between">
-                            <h2 className="text-gray-500 px-5">مقدار نهایی</h2>
-                            <div className="flex flex-row items-center justify-center gap-1 ">
+                            <h2 className="text-gray-500 px-3 md:text-md text-sm">مقدار نهایی</h2>
+                            <div className="flex flex-row items-center justify-center ">
                                 <img className="border-gray-400 border-r-1 px-1" src={coin.icon} width={35} height={35} alt="iran" />
-                                <p className="text-gray-500">{coin.fa_name}</p>
+                                <p className="text-gray-500 md:text-md text-sm ">{coin.fa_name}</p>
                             </div>
-                            <svg className="mx-5" width="35" height="35" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg className="mx-3" width="35" height="35" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M16 10L12 14L8 10" stroke="black" stroke-opacity="0.95" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
                         </div>

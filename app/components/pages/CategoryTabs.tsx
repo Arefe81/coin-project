@@ -50,7 +50,7 @@ export default function CategoryTabs() {
       </div>
 
       {/* نسخه موبایل */}
-      <div className="relative w-full max-w-[450px] mx-auto md:hidden">
+      <div className="relative w-115 md:hidden">
         <button
           onClick={() => setIsOpen(!isOpen)}
           className="flex items-center justify-between w-full bg-blue-600 text-white px-4 py-3 rounded-xl font-semibold text-base"
