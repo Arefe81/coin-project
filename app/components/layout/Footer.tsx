@@ -11,7 +11,7 @@ import {
 export default function Footer() {
   return (
     <footer dir="rtl" className="bg-[#0F2440] text-white mt-1 w-full">
-      <div className="max-w-[1140px] mx-auto py-10 grid grid-cols-1 md:grid-cols-3  md:gap-18 text-right">
+      <div className="max-w-[1140px] mx-auto py-10 grid grid-cols-1 md:grid-cols-3   md:gap-18 text-right">
 
         {/* توضیحات و لوگو */}
         <div className="flex flex-col mx-1">
@@ -30,14 +30,14 @@ export default function Footer() {
         </div>
 
         
-        <div className="grid grid-cols-2 gap-3 md:gap-20 md:col-span-2">
+        <div className="grid grid-cols-2  md:gap-20  md:col-span-2">
 
           
-          <div className=" px-2">
+          <div className=" ">
             <h3 className="md:text-xl md:font-bold mb-4 border-b border-gray-600 pb-2  inline-block">
               لینک‌های مرتبط
             </h3>
-            <div className="flex flex-row gap-2 md:gap-8">
+            <div className="flex flex-row gap-4 md:gap-8">
               <ul className=" text-sm md:text-md space-y-3    text-gray-300">
                 <li className=" "><a href="#">صفحه اصلی</a></li>
                 <li><a href="#">قیمت رمز ارزها</a></li>
@@ -55,12 +55,12 @@ export default function Footer() {
           </div>
 
           
-          <div className=" ">
+          <div className="pr-17 ">
             <h3 className="text-md md:text-xl  md:font-bold mb-4 border-b border-gray-600 pb-2 inline-block">
               تبادل ارز
             </h3>
-            <div className="flex flex-row md:gap-8">
-            <ul className=" text-md text-sm  space-y-3   text-gray-300">
+            <div className="flex flex-row   md:gap-8">
+            <ul className="  text-sm  space-y-3   text-gray-300">
               <li><a href="#">خرید بیت‌کوین</a></li>
               <li><a href="#">خرید اتریوم</a></li>
               <li><a href="#">خرید ریپل</a></li>
