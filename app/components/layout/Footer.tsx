@@ -11,7 +11,7 @@ import {
 export default function Footer() {
   return (
     <footer dir="rtl" className="bg-[#0F2440] text-white mt-1 w-full">
-      <div className="max-w-[1140px] mx-auto py-10 grid grid-cols-1 md:grid-cols-3   md:gap-18 text-right">
+      <div className="max-w-[1140px] mx-auto py-10 grid grid-cols-1 md:grid-cols-3   md:gap-20 text-right">
 
         {/* توضیحات و لوگو */}
         <div className="flex flex-col mx-1">
@@ -33,7 +33,7 @@ export default function Footer() {
         <div className="grid grid-cols-2  md:gap-20  md:col-span-2">
 
           
-          <div className=" ">
+          <div className=" pr-0.5">
             <h3 className="md:text-xl md:font-bold mb-4 border-b border-gray-600 pb-2  inline-block">
               لینک‌های مرتبط
             </h3>
@@ -55,7 +55,7 @@ export default function Footer() {
           </div>
 
           
-          <div className="pr-17 ">
+          <div className="pr-17 md:pr-15">
             <h3 className="text-md md:text-xl  md:font-bold mb-4 border-b border-gray-600 pb-2 inline-block">
               تبادل ارز
             </h3>
