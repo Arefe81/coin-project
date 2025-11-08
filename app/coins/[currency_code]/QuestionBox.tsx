@@ -116,7 +116,7 @@ export default function QuestionBox() {
                     </div>
 
                     <div className="w-full md:w-2/3">
-                        <h2 className="text-3xl font-bold">علاقه‌مند به خرید بیت کوین هستید؟</h2>
+                        <h2 className="md:text-3xl text-2xl font-bold">علاقه‌مند به خرید بیت کوین هستید؟</h2>
                         <p className="mt-4 text-lg">
                             ما اینجا هستیم تا تجربه‌ای متفاوت از خرید و فروش بیت کوین داشته
                             باشید.
