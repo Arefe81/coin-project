@@ -12,12 +12,7 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+
 @font-face {
   font-family: "iransans";
   src: local("iransans"), url("./font/IRANSans_Medium.ttf") format("truetype");
