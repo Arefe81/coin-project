@@ -73,7 +73,7 @@ export default function ChartSection({ currency_code }: ChartSectionProps) {
       </ul>
 
     
-      <div className="md:w-full md:h-[400px] h-[300px] w-full   boxshadwo bg-white p-6 rounded-lg">
+      <div className="md:w-full md:h-[400px] h-[300px] w-full  mx-auto boxshadwo bg-white p-6 rounded-lg">
         <ResponsiveContainer>
           <ComposedChart data={data}>
             <CartesianGrid strokeDasharray="3 3" vertical={false} />

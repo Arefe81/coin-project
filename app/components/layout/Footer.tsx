@@ -33,11 +33,11 @@ export default function Footer() {
         <div className="grid grid-cols-2  md:gap-20  md:col-span-2">
 
           
-          <div className=" pr-0.5">
+          <div className=" pr-1">
             <h3 className="md:text-xl md:font-bold mb-4 border-b border-gray-600 pb-2  inline-block">
               لینک‌های مرتبط
             </h3>
-            <div className="flex flex-row gap-4 md:gap-8">
+            <div className="flex flex-row gap-3 md:gap-8">
               <ul className=" text-sm md:text-md space-y-3    text-gray-300">
                 <li className=" "><a href="#">صفحه اصلی</a></li>
                 <li><a href="#">قیمت رمز ارزها</a></li>

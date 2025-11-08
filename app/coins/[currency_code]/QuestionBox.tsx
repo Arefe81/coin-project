@@ -20,7 +20,7 @@ export default function QuestionBox() {
                     className="w-full flex flex-row items-center justify-between px-4 py-4 cursor-pointer"
                     aria-expanded={isOpen}
                 >
-                    <h3 className="text-xl ">رمز ارز چیست؟</h3>
+                    <h3 className="md:text-xl ">رمز ارز چیست؟</h3>
 
                     <svg className="" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M4 8L12 16L20 8" stroke="black" stroke-opacity="0.95" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
@@ -33,7 +33,7 @@ export default function QuestionBox() {
                     className={`transition-all duration-300 overflow-hidden px-4 ${isOpen ? "max-h-84 py-4" : "max-h-0"
                         }`}
                 >
-                    <p className="text-lg leading-9">
+                    <p className="md:text-lg leading-9">
                         لورم ایپسوم یا طرح‌نما (به انگلیسی: Lorem ipsum) به متنی آزمایشی و
                         بی‌معنی در صنعت چاپ، صفحه‌آرایی و طراحی گرافیک گفته می‌شود. طراح
                         گرافیک از این متن به عنوان عنصری از ترکیب بندی برای پر کردن صفحه و
@@ -50,7 +50,7 @@ export default function QuestionBox() {
                     className="w-full flex flex-row items-center justify-between px-4 py-4 cursor-pointer"
                     aria-expanded={isBaz}
                 >
-                    <h3 className="text-xl ">آیا می توانم با کارت بانکی بیت کوین بخرم؟</h3>
+                    <h3 className="md:text-xl  ">آیا می توانم با کارت بانکی بیت کوین بخرم؟</h3>
 
                     <svg className="" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M4 8L12 16L20 8" stroke="black" stroke-opacity="0.95" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
@@ -63,7 +63,7 @@ export default function QuestionBox() {
                     className={`transition-all duration-300 overflow-hidden px-4 ${isBaz ? "max-h-84 py-4" : "max-h-0"
                         }`}
                 >
-                    <p className="text-lg leading-9">
+                    <p className="md:text-lg leading-9">
                         لورم ایپسوم یا طرح‌نما (به انگلیسی: Lorem ipsum) به متنی آزمایشی و
                         بی‌معنی در صنعت چاپ، صفحه‌آرایی و طراحی گرافیک گفته می‌شود. طراح
                         گرافیک از این متن به عنوان عنصری از ترکیب بندی برای پر کردن صفحه و
@@ -79,7 +79,7 @@ export default function QuestionBox() {
                     className="w-full flex flex-row items-center justify-between px-4 py-4 cursor-pointer"
                     aria-expanded={isOpen1}
                 >
-                    <h3 className="text-xl ">چرا باید از والت استفاده کنم؟</h3>
+                    <h3 className="md:text-xl ">چرا باید از والت استفاده کنم؟</h3>
 
                     <svg className="" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M4 8L12 16L20 8" stroke="black" stroke-opacity="0.95" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
@@ -92,7 +92,7 @@ export default function QuestionBox() {
                     className={`transition-all duration-300 overflow-hidden px-4 ${isOpen1 ? "max-h-84 py-4" : "max-h-0"
                         }`}
                 >
-                    <p className="text-lg leading-9">
+                    <p className="md:text-lg leading-9">
                         لورم ایپسوم یا طرح‌نما (به انگلیسی: Lorem ipsum) به متنی آزمایشی و
                         بی‌معنی در صنعت چاپ، صفحه‌آرایی و طراحی گرافیک گفته می‌شود. طراح
                         گرافیک از این متن به عنوان عنصری از ترکیب بندی برای پر کردن صفحه و
